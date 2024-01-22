@@ -14,5 +14,5 @@ An ASCII art generator that transforms text input into beautiful ASCII art.
     
 3. **Run the script:**
   ```bash
-python ascii_art_generator.py
+   python ascii_art_generator.py
 
