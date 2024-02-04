@@ -9,6 +9,11 @@ def generate_ascii_art(text, font='standard'):
         return ascii_art
     except pyfiglet.FontError:
         return "La police spécifiée n'est pas disponible."
+    except Exception as e:
+        if "caractère-non-géré" in str(e):
+            return "Le caractère spécifié n'est pas pris en charge."
+        else:
+            raise e  # Relever l'exception si ce n'est pas lié à un caractère spécifique
 
 if __name__ == "__main__":
     user_text = input("Entrez le texte pour l'art ASCII : ")
