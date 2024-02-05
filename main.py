@@ -1,7 +1,10 @@
 import pyfiglet
 
-def list_fonts():
+def list_all_fonts():
     return pyfiglet.FigletFont.getFonts()
+
+def list_fonts():
+    return list_all_fonts()[:10]
 
 def generate_ascii_art(text, font='standard'):
     try:
@@ -17,7 +20,10 @@ def generate_ascii_art(text, font='standard'):
 
 if __name__ == "__main__":
     user_text = input("Entrez le texte pour l'art ASCII : ")
-    print("Polices disponibles : ", ", ".join(list_fonts()[:10]))  # Affiche seulement les 10 premières pour la simplicité
+    
+    # Liste toutes les polices disponibles
+    print("Polices disponibles : ", ", ".join(list_all_fonts()))
+    
     user_font = input("Entrez le nom de la police (appuyez sur Entrée pour la police par défaut) : ")
     result = generate_ascii_art(user_text, user_font if user_font else 'standard')
     print(result)
