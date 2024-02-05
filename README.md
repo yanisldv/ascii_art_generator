@@ -15,10 +15,11 @@ Exemple :  "yanis" to this :
    git clone https://github.com/yanisldv/ascii_art_generator.git
    cd ascii_art_generator
 2. **Install packages**
+   Make sure you have Python installed on your machine. Then, install the required packages using:
     ```bash
     pip install pyfiglet
     
-3. **Run the script:**
+4. **Run the script:**
   ```bash
    python ascii_art_generator.py
 
